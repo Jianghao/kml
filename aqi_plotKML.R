@@ -9,4 +9,4 @@ data.sp <- SpatialPointsDataFrame(coords=city[c("lon","lat")],
                                   data=city,
                                   proj4string = CRS("+proj=longlat +datum=WGS84")) 
 
-plotKML(data.sp["aqi"], folder.name="China main city AQI",file.name="aqi.kml", points_name=iconv(data.sp$location, from = "gb2312", to = "UTF-8"))
+plotKML(data.sp["aqi"], folder.name="China main city AQI",file.name="aqi.kml", points_name=iconv(data.sp$aqi, from = "gb2312", to = "UTF-8"))
