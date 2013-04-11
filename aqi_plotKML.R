@@ -4,6 +4,7 @@ library(rgdal)
 library(plotKML)
 
 city <- read.csv("G:/AQI/pm25in/location/station_location.csv")
+data <- read.csv(file="D:/Documents/GitHub/H7N9/table/h7n9_data_loc.csv", header=T, stringsAsFactors=F)
 
 data.sp <- SpatialPointsDataFrame(coords=city[c("lon","lat")], 
                                   data=city,
